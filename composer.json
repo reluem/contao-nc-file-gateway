@@ -1,0 +1,43 @@
+{
+    "name": "reluem/contao-nc-file-gateway",
+    "description": "Restores the Notification Center 1.x file/CSV gateway for Notification Center 2",
+    "license": "LGPL-3.0-or-later",
+    "type": "contao-bundle",
+    "keywords": ["contao", "notification-center", "csv", "file", "gateway", "form"],
+    "homepage": "https://github.com/reluem/contao-nc-file-gateway",
+    "support": {
+        "issues": "https://github.com/reluem/contao-nc-file-gateway/issues",
+        "source": "https://github.com/reluem/contao-nc-file-gateway"
+    },
+    "authors": [
+        {
+            "name": "Lucas Rech",
+            "email": "lucas.rech@me.com",
+            "homepage": "https://github.com/reluem"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13.50 || ^5.3",
+        "terminal42/notification_center": "^2.6"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/core": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reluem\\ContaoNcFileGatewayBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Reluem\\ContaoNcFileGatewayBundle\\ContaoManager\\Plugin"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao/manager-plugin": true
+        }
+    }
+}

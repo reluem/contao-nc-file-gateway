@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file datatype="php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="nc_tokens.nc_file_voucher">
+        <source>Attaches the CSV file created by the file gateway message in this notification.</source>
+        <target>Hängt die von der File-Nachricht dieser Benachrichtigung erzeugte CSV-Datei an.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

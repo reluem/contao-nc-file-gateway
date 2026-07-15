@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Reluem\ContaoNcFileGatewayBundle\:
+        resource: '../../*'
+        exclude: '../../{ContaoNcFileGatewayBundle.php,Resources,DependencyInjection}'
+
+    Reluem\ContaoNcFileGatewayBundle\Migration\AddFileGatewayColumnsMigration:
+        tags:
+            - { name: contao.migration }

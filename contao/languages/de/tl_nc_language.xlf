@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file datatype="php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_nc_language.file_legend">
+        <source>File settings</source>
+        <target>Datei-Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_name.0">
+        <source>File name</source>
+        <target>Dateiname</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_name.1">
+        <source>CSV file name. Simple tokens are supported.</source>
+        <target>Name der CSV-Datei. Simple Tokens sind erlaubt.</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_storage_mode.0">
+        <source>Storage mode</source>
+        <target>Speichermodus</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_storage_mode.1">
+        <source>Choose whether each submission is appended or the file is overwritten.</source>
+        <target>Legt fest, ob jede Übermittlung angehängt oder die Datei überschrieben wird.</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_storage_mode.append">
+        <source>Append</source>
+        <target>Anhängen</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_storage_mode.overwrite">
+        <source>Overwrite</source>
+        <target>Überschreiben</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_content.0">
+        <source>File content</source>
+        <target>Dateiinhalt</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_language.file_content.1">
+        <source>One line per form submission. Delimiters and simple tokens are supported.</source>
+        <target>Eine Zeile pro Formularübermittlung. Trennzeichen und Simple Tokens sind erlaubt.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file datatype="php" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="XPL.nc_file_path.0.0">
+        <source>Path</source>
+        <target>Path</target>
+      </trans-unit>
+      <trans-unit id="XPL.nc_file_path.0.1">
+        <source>Provide a relative path inside <![CDATA[<em>files/</em>]]>, for example <![CDATA[<em>exports/orders</em>]]>.</source>
+        <target>Provide a relative path inside <![CDATA[<em>files/</em>]]>, for example <![CDATA[<em>exports/orders</em>]]>.</target>
+      </trans-unit>
+      <trans-unit id="XPL.nc_file_path.1.0">
+        <source>Email attachments</source>
+        <target>Email attachments</target>
+      </trans-unit>
+      <trans-unit id="XPL.nc_file_path.1.1">
+        <source>Use the attachment token <![CDATA[<strong>##nc_file_voucher##</strong>]]> on a mailer message in the same notification to attach the current CSV file. The file message must be sorted before the mailer message.</source>
+        <target>Use the attachment token <![CDATA[<strong>##nc_file_voucher##</strong>]]> on a mailer message in the same notification to attach the current CSV file. The file message must be sorted before the mailer message.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

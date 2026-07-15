@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file datatype="php" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="tl_nc_gateway.type.file">
+        <source>File/CSV</source>
+        <target>File/CSV</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_gateway.file_legend">
+        <source>File settings</source>
+        <target>File settings</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_gateway.file_type.0">
+        <source>File type</source>
+        <target>File type</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_gateway.file_type.1">
+        <source>Please select the file type.</source>
+        <target>Please select the file type.</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_gateway.file_type.csv">
+        <source>CSV</source>
+        <target>CSV</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_gateway.file_path.0">
+        <source>File path</source>
+        <target>File path</target>
+      </trans-unit>
+      <trans-unit id="tl_nc_gateway.file_path.1">
+        <source>Relative path inside the Contao files directory, e.g. <![CDATA[<em>exports/orders</em>]]>.</source>
+        <target>Relative path inside the Contao files directory, e.g. <![CDATA[<em>exports/orders</em>]]>.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
