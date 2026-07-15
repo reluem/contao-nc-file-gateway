@@ -27,8 +27,8 @@
         <target>Dateipfad</target>
       </trans-unit>
       <trans-unit id="tl_nc_gateway.file_path.1">
-        <source>Relative path inside the Contao files directory, e.g. <![CDATA[<em>Intern/Bestellungen</em>]]>.</source>
-        <target>Relativer Pfad innerhalb des Contao files-Verzeichnisses, z. B. <![CDATA[<em>Intern/Bestellungen</em>]]>.</target>
+        <source>Relative path inside the Contao files directory, e.g. <![CDATA[<em>exports/form-submissions</em>]]>.</source>
+        <target>Relativer Pfad innerhalb des Contao files-Verzeichnisses, z. B. <![CDATA[<em>exports/form-submissions</em>]]>.</target>
       </trans-unit>
     </body>
   </file>

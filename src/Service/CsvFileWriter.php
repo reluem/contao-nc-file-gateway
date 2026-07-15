@@ -55,7 +55,7 @@ class CsvFileWriter
             throw new \InvalidArgumentException('The file path must be relative to the Contao files directory.');
         }
 
-        // Normalize legacy values such as "/files/Intern/...".
+        // Normalize legacy values such as "/files/exports/...".
         $relativeDirectory = preg_replace('#^files/#', '', $relativeDirectory) ?? $relativeDirectory;
 
         $filesRoot = Path::join($this->kernel->getProjectDir(), 'files');

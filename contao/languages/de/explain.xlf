@@ -7,8 +7,8 @@
         <target>Pfad</target>
       </trans-unit>
       <trans-unit id="XPL.nc_file_path.0.1">
-        <source>Provide a relative path inside <![CDATA[<em>files/</em>]]>, for example <![CDATA[<em>Intern/Bestellungen/Ballkarten</em>]]>.</source>
-        <target>Geben Sie einen relativen Pfad innerhalb von <![CDATA[<em>files/</em>]]> an. Beispiel: <![CDATA[<em>Intern/Bestellungen/Ballkarten</em>]]>.</target>
+        <source>Provide a relative path inside <![CDATA[<em>files/</em>]]>, for example <![CDATA[<em>exports/form-submissions</em>]]>.</source>
+        <target>Geben Sie einen relativen Pfad innerhalb von <![CDATA[<em>files/</em>]]> an. Beispiel: <![CDATA[<em>exports/form-submissions</em>]]>.</target>
       </trans-unit>
       <trans-unit id="XPL.nc_file_path.1.0">
         <source>Email attachments</source>

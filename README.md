@@ -34,7 +34,7 @@ php vendor/bin/contao-console cache:clear
 | Field | Example |
 |-------|---------|
 | Type | File/CSV |
-| File path | `Intern/Bestellungen/Ballkarten` (relative to `files/`) |
+| File path | `exports/form-submissions` (relative to `files/`) |
 
 ### 2. Add a file message to your notification
 
@@ -43,7 +43,7 @@ php vendor/bin/contao-console cache:clear
 | Field | Example |
 |-------|---------|
 | Gateway | your file gateway |
-| File name | `2026_Ballkarten.csv` |
+| File name | `submissions.csv` |
 | Storage mode | Append |
 | File content | `{{date::d.m.Y H:i}};##form_lastname##;##form_firstname##;##form_email##` |
 
