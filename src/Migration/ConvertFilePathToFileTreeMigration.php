@@ -39,6 +39,8 @@ class ConvertFilePathToFileTreeMigration extends AbstractMigration
             "SELECT id, file_path FROM tl_nc_gateway WHERE type = 'file' AND file_path IS NOT NULL AND file_path != ''",
         );
 
+        $resolved = [];
+
         foreach ($gateways as $gateway) {
             $path = (string) $gateway['file_path'];
             $normalized = preg_replace('#^/?files/#', '', str_replace('\\', '/', trim($path))) ?? '';
@@ -49,11 +51,7 @@ class ConvertFilePathToFileTreeMigration extends AbstractMigration
                 [$fullPath, 'folder'],
             );
 
-            $this->connection->update(
-                'tl_nc_gateway',
-                ['file_path' => \is_string($uuid) && '' !== $uuid ? $uuid : null],
-                ['id' => $gateway['id']],
-            );
+            $resolved[(int) $gateway['id']] = \is_string($uuid) && '' !== $uuid ? $uuid : null;
         }
 
         $platform = $this->connection->getDatabasePlatform();
@@ -68,6 +66,14 @@ class ConvertFilePathToFileTreeMigration extends AbstractMigration
             );
             $this->connection->executeStatement(
                 'ALTER TABLE tl_nc_gateway ALTER COLUMN file_path TYPE BINARY(16)',
+            );
+        }
+
+        foreach ($resolved as $id => $uuid) {
+            $this->connection->executeStatement(
+                'UPDATE tl_nc_gateway SET file_path = ? WHERE id = ?',
+                [$uuid, $id],
+                [\PDO::PARAM_LOB, \PDO::PARAM_INT],
             );
         }
 
