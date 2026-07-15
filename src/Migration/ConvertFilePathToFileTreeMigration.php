@@ -7,7 +7,6 @@ namespace Reluem\ContaoNcFileGatewayBundle\Migration;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
 use Doctrine\DBAL\Connection;
-use Doctrine\DBAL\Platforms\MySQLPlatform;
 use Doctrine\DBAL\Schema\Column;
 
 class ConvertFilePathToFileTreeMigration extends AbstractMigration
@@ -54,28 +53,22 @@ class ConvertFilePathToFileTreeMigration extends AbstractMigration
             $resolved[(int) $gateway['id']] = \is_string($uuid) && '' !== $uuid ? $uuid : null;
         }
 
-        $platform = $this->connection->getDatabasePlatform();
-
-        if ($platform instanceof MySQLPlatform) {
-            $this->connection->executeStatement(
-                'ALTER TABLE tl_nc_gateway CHANGE file_path file_path BINARY(16) DEFAULT NULL',
-            );
-        } else {
-            $this->connection->executeStatement(
-                'ALTER TABLE tl_nc_gateway ALTER COLUMN file_path DROP NOT NULL',
-            );
-            $this->connection->executeStatement(
-                'ALTER TABLE tl_nc_gateway ALTER COLUMN file_path TYPE BINARY(16)',
-            );
-        }
+        $this->connection->executeStatement(
+            'ALTER TABLE tl_nc_gateway ADD file_path_uuid BINARY(16) DEFAULT NULL',
+        );
 
         foreach ($resolved as $id => $uuid) {
             $this->connection->executeStatement(
-                'UPDATE tl_nc_gateway SET file_path = ? WHERE id = ?',
+                'UPDATE tl_nc_gateway SET file_path_uuid = ? WHERE id = ?',
                 [$uuid, $id],
                 [\PDO::PARAM_LOB, \PDO::PARAM_INT],
             );
         }
+
+        $this->connection->executeStatement('ALTER TABLE tl_nc_gateway DROP file_path');
+        $this->connection->executeStatement(
+            'ALTER TABLE tl_nc_gateway CHANGE file_path_uuid file_path BINARY(16) DEFAULT NULL',
+        );
 
         return $this->createResult(true);
     }
