@@ -34,7 +34,7 @@ php vendor/bin/contao-console cache:clear
 | Field | Example |
 |-------|---------|
 | Type | File/CSV |
-| File path | `exports/form-submissions` (relative to `files/`) |
+| Export folder | pick `exports/form-submissions` in the file manager |
 
 ### 2. Add a file message to your notification
 

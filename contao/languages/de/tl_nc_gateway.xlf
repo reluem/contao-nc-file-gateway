@@ -23,12 +23,12 @@
         <target>CSV</target>
       </trans-unit>
       <trans-unit id="tl_nc_gateway.file_path.0">
-        <source>File path</source>
-        <target>Dateipfad</target>
+        <source>Export folder</source>
+        <target>Exportordner</target>
       </trans-unit>
       <trans-unit id="tl_nc_gateway.file_path.1">
-        <source>Relative path inside the Contao files directory, e.g. <![CDATA[<em>exports/form-submissions</em>]]>.</source>
-        <target>Relativer Pfad innerhalb des Contao files-Verzeichnisses, z. B. <![CDATA[<em>exports/form-submissions</em>]]>.</target>
+        <source>Select the folder inside the Contao file manager where CSV exports are stored.</source>
+        <target>Wählen Sie den Ordner in der Contao-Dateiverwaltung, in dem CSV-Exporte gespeichert werden.</target>
       </trans-unit>
     </body>
   </file>

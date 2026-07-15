@@ -3,12 +3,12 @@
   <file datatype="php" source-language="en" target-language="en">
     <body>
       <trans-unit id="XPL.nc_file_path.0.0">
-        <source>Path</source>
-        <target>Path</target>
+        <source>Export folder</source>
+        <target>Export folder</target>
       </trans-unit>
       <trans-unit id="XPL.nc_file_path.0.1">
-        <source>Provide a relative path inside <![CDATA[<em>files/</em>]]>, for example <![CDATA[<em>exports/orders</em>]]>.</source>
-        <target>Provide a relative path inside <![CDATA[<em>files/</em>]]>, for example <![CDATA[<em>exports/orders</em>]]>.</target>
+        <source>Select a folder from the Contao file manager. Only folders inside <![CDATA[<em>files/</em>]]> can be chosen. Contao validates the selection on save.</source>
+        <target>Select a folder from the Contao file manager. Only folders inside <![CDATA[<em>files/</em>]]> can be chosen. Contao validates the selection on save.</target>
       </trans-unit>
       <trans-unit id="XPL.nc_file_path.1.0">
         <source>Email attachments</source>

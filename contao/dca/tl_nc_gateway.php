@@ -17,13 +17,14 @@ $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['file_type'] = [
 
 $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['file_path'] = [
     'exclude' => true,
-    'inputType' => 'text',
+    'inputType' => 'fileTree',
     'eval' => [
         'mandatory' => true,
-        'maxlength' => 255,
-        'tl_class' => 'long clr',
+        'fieldType' => 'radio',
+        'files' => false,
+        'tl_class' => 'clr',
         'helpwizard' => true,
     ],
     'explanation' => 'nc_file_path',
-    'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
+    'sql' => ['type' => 'binary', 'length' => 16, 'default' => null, 'notnull' => false],
 ];

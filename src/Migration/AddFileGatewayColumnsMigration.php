@@ -40,7 +40,7 @@ class AddFileGatewayColumnsMigration extends AbstractMigration
         }
 
         if (!isset($gatewayColumns['file_path'])) {
-            $this->connection->executeStatement("ALTER TABLE tl_nc_gateway ADD file_path VARCHAR(255) NOT NULL DEFAULT ''");
+            $this->connection->executeStatement('ALTER TABLE tl_nc_gateway ADD file_path BINARY(16) DEFAULT NULL');
         }
 
         if (!isset($languageColumns['file_name'])) {

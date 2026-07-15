@@ -11,3 +11,7 @@ services:
     Reluem\ContaoNcFileGatewayBundle\Migration\AddFileGatewayColumnsMigration:
         tags:
             - { name: contao.migration }
+
+    Reluem\ContaoNcFileGatewayBundle\Migration\ConvertFilePathToFileTreeMigration:
+        tags:
+            - { name: contao.migration }

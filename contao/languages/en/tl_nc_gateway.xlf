@@ -23,12 +23,12 @@
         <target>CSV</target>
       </trans-unit>
       <trans-unit id="tl_nc_gateway.file_path.0">
-        <source>File path</source>
-        <target>File path</target>
+        <source>Export folder</source>
+        <target>Export folder</target>
       </trans-unit>
       <trans-unit id="tl_nc_gateway.file_path.1">
-        <source>Relative path inside the Contao files directory, e.g. <![CDATA[<em>exports/orders</em>]]>.</source>
-        <target>Relative path inside the Contao files directory, e.g. <![CDATA[<em>exports/orders</em>]]>.</target>
+        <source>Select the folder inside the Contao file manager where CSV exports are stored.</source>
+        <target>Select the folder inside the Contao file manager where CSV exports are stored.</target>
       </trans-unit>
     </body>
   </file>

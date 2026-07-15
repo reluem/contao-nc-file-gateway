@@ -25,6 +25,7 @@ class CsvExportHandler
 {
     public function __construct(
         private readonly CsvFileWriter $csvFileWriter,
+        private readonly ExportDirectoryResolver $exportDirectoryResolver,
         private readonly FileExportContext $fileExportContext,
         private readonly BulkyItemStorage $bulkyItemStorage,
         private readonly SimpleTokenParser $simpleTokenParser,
@@ -46,12 +47,12 @@ class CsvExportHandler
         $gatewayConfig = $parcel->getStamp(GatewayConfigStamp::class)->gatewayConfig;
         $languageConfig = $parcel->getStamp(LanguageConfigStamp::class)->languageConfig;
 
-        $filePath = trim($gatewayConfig->getString('file_path'));
+        $filePath = $this->exportDirectoryResolver->resolve($gatewayConfig->getString('file_path'));
         $fileName = trim($languageConfig->getString('file_name'));
         $storageMode = $languageConfig->getString('file_storage_mode') ?: 'append';
         $fileContent = $languageConfig->getString('file_content');
 
-        if ('' === $filePath || '' === $fileName || '' === $fileContent) {
+        if (null === $filePath || '' === $fileName || '' === $fileContent) {
             return;
         }
 
